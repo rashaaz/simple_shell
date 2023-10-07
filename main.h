@@ -189,6 +189,8 @@ int w_his(ff_t *ff);
 int p_a(ll_t *n);
 int s_alias_me(ff_t *ff, char *s);
 ssize_t i_buffer(ff_t *ff, char **buffer, size_t *l);
+int u_alias_me(ff_t *ff, char *s);
+ssize_t r_buffer(ff_t *ff, char *b, size_t *j);
 
 
 #endif
