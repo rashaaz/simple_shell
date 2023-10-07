@@ -10,15 +10,12 @@
  */
 int is_alpha_me(int ch)
 {
-	switch (ch)
-	{
-		case 'a' ... 'z':
-		case 'A' ... 'Z':
-			return (1);
-		default:
-			return (0);
-	}
+	if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+		return (1);
+	else
+		return (0);
 }
+
 /**
  * g_h_f - Generate the full path to
  * the history file in the user's home directory

@@ -86,6 +86,8 @@ int _getline_me(ff_t *ff, char **ptr, size_t *lg)
 	*ptr = po;
 	return (st);
 }
+
+
 /**
  * _convert - Convert a number to
  * a string representation.
