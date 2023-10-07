@@ -6,7 +6,6 @@
  * @ff: Pointer to an ff_t structure.
  * @av: Array of command-line arguments.
  */
-
 void st_in_me(ff_t *ff, char **av)
 {
 	int ii = 0;
@@ -34,6 +33,7 @@ void st_in_me(ff_t *ff, char **av)
 	}
 }
 
+
 /**
  * _unsetenvnew_me - Unset an
  * environment variable.
@@ -46,7 +46,6 @@ void st_in_me(ff_t *ff, char **av)
  * of environment variables
  * modified on failure.
  */
-
 int _unsetenvnew_me(ff_t *ff, char *vv)
 {
 	ll_t *n = ff->envnow;
@@ -71,7 +70,6 @@ int _unsetenvnew_me(ff_t *ff, char *vv)
 	}
 	return (ff->r_env_ch);
 }
-
 /**
  * _error_print_me - Print an
  * error message.
@@ -89,7 +87,6 @@ void _error_print_me(ff_t *ff, char *es)
 	_aputs_me(": ");
 	_aputs_me(es);
 }
-
 /**
  * free_l - Frees the entire list
  * @h_p: A pointer to a pointer
@@ -132,7 +129,7 @@ int _comp(char *str1, char *str2)
 {
 	while (*str1 && *str2)
 	{
-		case (*str1 != *str2)
+		if (*str1 != *str2)
 		{
 			return (*str1 - *str2);
 		}

@@ -60,12 +60,13 @@ int _env_me(ff_t *ff)
  * Return: The number of characters
  * read or -1 on failure
  */
+
 ssize_t i_buffer(ff_t *ff, char **buffer, size_t *l)
 {
 	ssize_t res = 0;
 	size_t l_p = 0;
 
-	case (!*l)
+	if (!*l)
 	{
 		free(*buffer);
 		*buffer = NULL;
@@ -75,9 +76,9 @@ ssize_t i_buffer(ff_t *ff, char **buffer, size_t *l)
 #else
 		res = _getline_me(ff, buffer, &l_p);
 #endif
-		case (res > 0)
+		if (res > 0)
 		{
-			case ((*buffer)[res - 1] == '\n')
+			if ((*buffer)[res - 1] == '\n')
 			{
 				(*buffer)[res - 1] = '\0';
 				res--;
@@ -93,18 +94,17 @@ ssize_t i_buffer(ff_t *ff, char **buffer, size_t *l)
 	}
 	return (res);
 }
-
 /**
  * _date - Prints the value of ff->h
  * @ff: A pointer to the ff_t structure
  * Return: Always 0
  */
+
 int _date(ff_t *ff)
 {
 	print_l(ff->h);
 	return (0);
 }
-
 /**
  * is_del - Checks if a character is
  * in a given delimiter string.
@@ -114,10 +114,11 @@ int _date(ff_t *ff)
  * Return: 1 if the character is found
  * in the delimiter string, 0 otherwise.
  */
+
 int is_del(char ch, char *del)
 {
 	while (*del)
 		if (*del++ == ch)
 			return (1);
 	return (0);
-}
+

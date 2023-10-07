@@ -32,7 +32,6 @@ int fi_bui_me(ff_t *ff)
 		}
 	return (b_in_ret);
 }
-
 /**
  * _input_me - Reads input from the
  * user or a file and processes it
@@ -41,6 +40,7 @@ int fi_bui_me(ff_t *ff)
  * Return: The number of characters
  * processed or -1 on failure
  */
+
 ssize_t _input_me(ff_t *ff)
 {
 	static char *buffer;
@@ -79,7 +79,6 @@ ssize_t _input_me(ff_t *ff)
 	*_p = buffer;
 	return (re);
 }
-
 /**
  * p_a - Prints an alias
  * @n: A pointer to the ll_t structure
@@ -102,7 +101,6 @@ int p_a(ll_t *n)
 	}
 	return (1);
 }
-
 /**
  * _concatn - Concatenates up to 'num'
  * characters from 'so' to 'd'.
@@ -113,6 +111,7 @@ int p_a(ll_t *n)
  *
  * Return: Pointer to the destination buffer 'd'.
  */
+
 char *_concatn(char *d, char *so, int num)
 {
 	int ii, jj;
@@ -139,6 +138,7 @@ char *_concatn(char *d, char *so, int num)
  * containing file information
  * Return: 1 on success, -1 on failure
  */
+
 int w_his(ff_t *ff)
 {
 	ssize_t dd;

@@ -4,6 +4,7 @@
  * print_many_characters - Prints a string.
  * @s: The input string to print.
  */
+
 void print_many_characters(char *s)
 {
 	int j = 0;
@@ -16,7 +17,6 @@ void print_many_characters(char *s)
 		j++;
 	}
 }
-
 /**
  * add_x - Adds a new node to the
  * beginning of the list
@@ -29,21 +29,22 @@ void print_many_characters(char *s)
  * Return: A pointer to the
  * new node or NULL on failure
  */
+
 ll_t *add_x(ll_t **h, const char *uu, int numb)
 {
 	ll_t *new_h;
 
-	case (!h):
+	if (!h)
 		return (NULL);
 	new_h = malloc(sizeof(ll_t));
-	case (!new_h):
+	if (!new_h)
 		return (NULL);
 	_note((void *)new_h, 0, sizeof(ll_t));
 	new_h->numb = numb;
 	if (uu)
 	{
 		new_h->uu = _dupl(uu);
-		case (!new_h->uu)
+		if (!new_h->uu)
 		{
 			free(new_h);
 			return (NULL);
@@ -53,12 +54,11 @@ ll_t *add_x(ll_t **h, const char *uu, int numb)
 	*h = new_h;
 	return (new_h);
 }
-
 /**
  * _help_me - Handles the
  * help command.
  * @ff: The structure containing function arguments
- * and environment variables.
+ * and environment variables..
  *
  * This function prints a
  * placeholder message
@@ -75,10 +75,9 @@ int _help_me(ff_t *ff)
 	char **arry;
 
 	arry = ff->argv;
-	case (0)
-		print_many_characters("help call works. Function not yet implemented \n");
+	print_many_characters("help call works. Function not yet implemented \n");
 	if (0)
-		case (print_many_characters(*arry));
+		print_many_characters(*arry);
 	return (0);
 }
 
@@ -106,7 +105,6 @@ char *_genv_me(ff_t *ff, const char *name)
 	}
 	return (NULL);
 }
-
 /**
  * fi_cmd_me - Executes
  * non-built-in shell commands.
