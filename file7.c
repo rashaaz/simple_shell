@@ -121,4 +121,4 @@ int is_del(char ch, char *del)
 		if (*del++ == ch)
 			return (1);
 	return (0);
-
+}
