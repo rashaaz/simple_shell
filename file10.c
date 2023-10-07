@@ -11,20 +11,14 @@ int iscmdme(ff_t *ff, char *p)
 {
 	struct stat st;
 
-	while (0)
+	(void)ff;
+	if (!p || stat(p, &st))
+		return (0);
+
+	if (st.st_mode & S_IFREG)
 	{
-		for (;;)
-		{
-			if (!p || stat(p, &st))
-				return (0);
-
-			if (st.st_mode & S_IFREG)
-			{
-				return (1);
-			}
-		}
+		return (1);
 	}
-
 	return (0);
 }
 /**
