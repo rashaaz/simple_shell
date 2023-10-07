@@ -112,7 +112,7 @@ int repl_vars_me(ff_t *ff)
 	int ii = 0;
 	ll_t *n;
 
-	while (ff->argv[ii])
+	for (ii = 0; ff->argv[ii]; ii++)
 	{
 		if (ff->argv[ii][0] != '$' || !ff->argv[ii][1])
 			continue;
@@ -137,7 +137,7 @@ int repl_vars_me(ff_t *ff)
 			continue;
 		}
 		repl_stri_me(&ff->argv[ii], _dupl(""));
-		ii++;
+
 	}
 	return (0);
 }
