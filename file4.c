@@ -5,7 +5,7 @@
  * by 'ptr1' starts with the substring
  * pointed to by 'ptr2'.
  * @ptr1: The string to search.
- * @ptr2: The substring to find.
+ * @ptr2: The substring to find
  *
  * Return: A pointer to the next
  * character of 'ptr1' after the matching
