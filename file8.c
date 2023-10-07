@@ -33,10 +33,10 @@ ll_t *add_x(ll_t **h, const char *uu, int numb)
 {
 	ll_t *new_h;
 
-	case (!h)
+	case (!h):
 		return (NULL);
 	new_h = malloc(sizeof(ll_t));
-	case (!new_h)
+	case (!new_h):
 		return (NULL);
 	_note((void *)new_h, 0, sizeof(ll_t));
 	new_h->numb = numb;
