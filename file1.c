@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _len - Computes the length of a string
  * @c: The input string to measure
@@ -15,14 +16,12 @@ int _len(char *c)
 		return (0);
 	}
 
-	for (; *c;)
+	while (*c++)
 	{
 		j++;
-		c++;
 	}
 	return (j);
 }
-
 /**
  * split1 - Splits a string into
  * words based on
@@ -78,6 +77,7 @@ char **split1(char *si, char del)
  * @s: The string representing the alias
  * Return: 1 if an error occurred, 0 otherwise
  */
+
 int u_alias_me(ff_t *ff, char *s)
 {
 	char *po, x;
@@ -126,7 +126,6 @@ int _alias_me(ff_t *ff)
 
 	return (0);
 }
-
 /**
  * a_n_end - Adds a new node
  * to the end of the list
@@ -139,6 +138,7 @@ int _alias_me(ff_t *ff)
  * Return: A pointer to the new
  * node or NULL on failure
  */
+
 ll_t *a_n_end(ll_t **h, const char *uu, int numb)
 {
 	ll_t *new_n, *n;
