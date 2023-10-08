@@ -58,7 +58,7 @@ void *_realloc_me(void *pot, unsigned int o_size, unsigned int n_size)
 /**
  * findpathme - Find a command in the given path.
  * @ff: The structure containing function
- * arguments and environment variables.
+ * arguments and environment variables..
  * @pathme: The path to search for the command.
  * @m: The command to find.
  *
@@ -126,6 +126,7 @@ int _mysetenv_me(ff_t *ff)
  * Return: A pointer to the
  * duplicated string.
  */
+
 char *_dupl(const char *s)
 {
 	int l = 0;
@@ -138,7 +139,7 @@ char *_dupl(const char *s)
 	res = malloc(sizeof(char) * (l + 1));
 	if (!res)
 		return (NULL);
-	while (l--)
+	for (l++; l--;)
 		res[l] = *--s;
 	return (res);
 }
