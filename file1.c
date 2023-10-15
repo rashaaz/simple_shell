@@ -27,7 +27,7 @@ int _len(char *c)
  * split1 - Splits a string into
  * words based on
  * a single delimiter character
- * @si: The input string to split.
+ * @si: The input string to split
  * @del: The delimiter character.
  *
  * Return: An array of strings representing
