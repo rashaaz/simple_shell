@@ -34,7 +34,7 @@ int _len(char *c)
  * the split words, or NULL if failed.
  */
 
-char **split1(char *si, char *del)
+char **split1(char *si, char del)
 {
 	int ii, jj, r, h, nw = 0;
 	char **c;
