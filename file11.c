@@ -5,7 +5,7 @@
  * characters from 'so' to 'd'.
  * @d: Destination buffer.
  * @so: Source string.
- * @num: Maximum number of characters to copy
+ * @num: Maximum number of characters to coy
  *
  * Return: Pointer to the destination buffer 'd'.
  */
