@@ -2,10 +2,19 @@
 
 /**
  * _copyn - Copies up to 'num'
- * characters from 'so' to 'd'.
+ * characters from 'so' to 'd'
  * @d: Destination buffer.
+<<<<<<< HEAD
  * @so: Source string.
+=======
+<<<<<<< HEAD
+ * @so: Source string.
+ * @num: Maximum number of characters to copy.
+=======
+ * @so: Source string..
+>>>>>>> d20ca9eff06b0db874914d5b5dddb4433efbe4e5
  * @num: Maximum number of characters to coy
+>>>>>>> 4a3cb5be83d070fedba83984fb580b6eae5f4493
  *
  * Return: Pointer to the destination buffer 'd'.
  */
