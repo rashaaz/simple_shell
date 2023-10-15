@@ -3,7 +3,7 @@
  * _len - Computes the length of a string
  * @c: The input string to measure
  *
- * Return: The length of the string as an integer.
+ * Return: The length of the string as an integer
  * If the input string is NULL, it returns 0.
  */
 int _len(char *c)
