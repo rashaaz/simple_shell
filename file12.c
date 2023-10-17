@@ -4,7 +4,7 @@
  * _chme - Searches for the first
  * occurrence of character 'c' in 'str'.
  * @str: Input string to search.
- * @c: Character to find.
+ * @c: Character to find
  *
  * Return: Pointer to the first occurrence
  * of 'c' in 'str', or NULL if not found.
