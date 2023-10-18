@@ -97,6 +97,7 @@ int _cd_me(ff_t *ff)
 
 	ss = getcwd(b, 1024);
 	if (!ss)
+		ch = /* TODO: what should this be? */
 		print_many_characters("TODO: >>getcwd failure emsg here<<\n");
 	if (!ff->argv[1])
 	{
@@ -115,6 +116,7 @@ int _cd_me(ff_t *ff)
 			return (1);
 		}
 		print_many_characters(_genv_me(ff, "OLDPWD=")), _putchar('\n');
+		ch = /* TODO: what should this be? */
 		chdir((ptr = _genv_me(ff, "OLDPWD=")) ? ptr : "/");
 	}
 	else
