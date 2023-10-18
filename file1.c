@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _len - Computes the length of a string.
+ * _len - Computes the length of a string
  * @c: The input string to measure
  *
  * Return: The length of the string as an integer
@@ -28,7 +28,7 @@ int _len(char *c)
  * words based on
  * a single delimiter character
  * @si: The input string to split
- * @del: The delimiter character
+ * @del: The delimiter character.
  *
  * Return: An array of strings representing
  * the split words, or NULL if failed.

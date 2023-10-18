@@ -46,7 +46,7 @@ int ren_his(ff_t *ff)
  * @ff: File flag structure.
  *
  * Return: 1 if the file descriptor
- * is associated with a terminal, 0 otherwise
+ * is associated with a terminal, 0 otherwise.
  */
 int reactive(ff_t *ff)
 {
@@ -57,7 +57,7 @@ int reactive(ff_t *ff)
  * _cd_me - Handles the cd
  * (change directory) command.
  * @ff: The structure containing function
- * arguments and environment variables
+ * arguments and environment variables.
  *
  * This function attempts to
  * retrieve the current
