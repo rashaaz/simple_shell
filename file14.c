@@ -8,7 +8,6 @@
  * Return: 1 if the character is
  * alphabetic (a letter), 0 otherwise.
  */
-
 int is_alpha_me(int ch)
 {
 	if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
@@ -25,7 +24,6 @@ int is_alpha_me(int ch)
  * Return: A dynamically allocated string
  * containing the file path or NULL on failure
  */
-
 char *g_h_f(ff_t *ff)
 {
 	char *buffer, *d;
@@ -42,7 +40,6 @@ char *g_h_f(ff_t *ff)
 	_concat(buffer, HI_FI);
 	return (buffer);
 }
-
 /**
  * _comment_me - Remove
  * comments from a string.
@@ -50,14 +47,17 @@ char *g_h_f(ff_t *ff)
  */
 void _comment_me(char *b)
 {
-	int ii;
+	int ii = 0;
 
-	for (ii = 0; b[ii] != '\0'; ii++)
+	while (b[ii] != '\0')
+	{
 		if (b[ii] == '#' && (!ii || b[ii - 1] == ' '))
 		{
 			b[ii] = '\0';
 			break;
 		}
+		ii++;
+	}
 }
 /**
  * g_envir_m - Get the environment
@@ -84,13 +84,12 @@ char **g_envir_m(ff_t *ff)
  *
  * Return: The integer value of the string.
  */
-
 int atoi_me(char *str)
 {
-	int ii, s = 1, f = 0, o;
+	int ii = 0, s = 1, f = 0, o;
 	unsigned int r = 0;
 
-	for (ii = 0;  str[ii] != '\0' && f != 2; ii++)
+	while (str[ii] != '\0' && f != 2)
 	{
 		if (str[ii] == '-')
 			s *= -1;
@@ -103,6 +102,8 @@ int atoi_me(char *str)
 		}
 		else if (f == 1)
 			f = 2;
+
+		ii++;
 	}
 
 	if (s == -1)
