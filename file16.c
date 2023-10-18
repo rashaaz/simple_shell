@@ -17,6 +17,8 @@ void _aputs_me(char *ptr)
 		ii++;
 	}
 }
+
+
 /**
  * node_s - Searches for a node with
  * a specific prefix and character
@@ -27,6 +29,7 @@ void _aputs_me(char *ptr)
  * Return: A pointer to the
  * found node or NULL if not found
  */
+
 ll_t *node_s(ll_t *n, char *pre, char c)
 {
 	char *po = NULL;
@@ -40,6 +43,7 @@ ll_t *node_s(ll_t *n, char *pre, char c)
 	}
 	return (NULL);
 }
+
 /**
  * _node_i - Find the index of a node in a linked list
  * @h: The head of the linked list
@@ -87,6 +91,7 @@ char *dupchars_me(char *path, int bigin, int end)
  *
  * Return: Always returns 0.
  */
+
 int _myunsetenv_me(ff_t *ff)
 {
 	int ii;

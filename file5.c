@@ -2,7 +2,8 @@
 
 /**
  * _exit_me - Handles the exit command.
- * @ff: The structure containing function
+ * @ff: The structure containing function arguments
+ * and environment variables..
  *
  * This function checks if an
  * argument is provided in
