@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _len - Computes the length of a string
+ * _len - Computes the length of a string.
  * @c: The input string to measure
  *
  * Return: The length of the string as an integer
