@@ -31,7 +31,7 @@ int _len(char *c)
  * @del: The delimiter character.
  *
  * Return: An array of strings representing
- * the split words, or NULL if failed.
+ * the split words, or NULL if failed
  */
 
 char **split1(char *si, char del)
