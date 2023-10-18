@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * print_l_s - Prints the list
  * @hh: A pointer to the head of the list
@@ -19,6 +18,7 @@ size_t print_l_s(const ll_t *hh)
 	}
 	return (j);
 }
+
 /**
  * ren_his - Renumber the
  * history entries
@@ -48,16 +48,16 @@ int ren_his(ff_t *ff)
  * Return: 1 if the file descriptor
  * is associated with a terminal, 0 otherwise.
  */
-
 int reactive(ff_t *ff)
 {
 	return (isatty(STDIN_FILENO) && ff->rf <= 2);
 }
+
 /**
  * _cd_me - Handles the cd
  * (change directory) command.
- * @ff: The structure containing function arguments
- * and environment variables..
+ * @ff: The structure containing function
+ * arguments and environment variables
  *
  * This function attempts to
  * retrieve the current
@@ -97,6 +97,7 @@ int _cd_me(ff_t *ff)
 
 	ss = getcwd(b, 1024);
 	if (!ss)
+		ch =
 		print_many_characters("TODO: >>getcwd failure emsg here<<\n");
 	if (!ff->argv[1])
 	{
@@ -115,6 +116,7 @@ int _cd_me(ff_t *ff)
 			return (1);
 		}
 		print_many_characters(_genv_me(ff, "OLDPWD=")), _putchar('\n');
+		ch =
 		chdir((ptr = _genv_me(ff, "OLDPWD=")) ? ptr : "/");
 	}
 	else
@@ -131,6 +133,7 @@ int _cd_me(ff_t *ff)
 	}
 	return (0);
 }
+
 /**
  * fr_in_me - Free input-related
  * memory in the ff_t structure.

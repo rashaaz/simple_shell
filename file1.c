@@ -1,10 +1,9 @@
 #include "main.h"
-
 /**
  * _len - Computes the length of a string
  * @c: The input string to measure
  *
- * Return: The length of the string as an integer.
+ * Return: The length of the string as an integer
  * If the input string is NULL, it returns 0.
  */
 int _len(char *c)
@@ -16,17 +15,19 @@ int _len(char *c)
 		return (0);
 	}
 
-	while (*c++)
+	for (; *c;)
 	{
 		j++;
+		c++;
 	}
 	return (j);
 }
+
 /**
  * split1 - Splits a string into
  * words based on
- * a single delimiter character.
- * @si: The input string to split.
+ * a single delimiter character
+ * @si: The input string to split
  * @del: The delimiter character.
  *
  * Return: An array of strings representing
@@ -77,7 +78,6 @@ char **split1(char *si, char del)
  * @s: The string representing the alias
  * Return: 1 if an error occurred, 0 otherwise
  */
-
 int u_alias_me(ff_t *ff, char *s)
 {
 	char *po, x;
@@ -126,6 +126,7 @@ int _alias_me(ff_t *ff)
 
 	return (0);
 }
+
 /**
  * a_n_end - Adds a new node
  * to the end of the list
@@ -138,7 +139,6 @@ int _alias_me(ff_t *ff)
  * Return: A pointer to the new
  * node or NULL on failure
  */
-
 ll_t *a_n_end(ll_t **h, const char *uu, int numb)
 {
 	ll_t *new_n, *n;
