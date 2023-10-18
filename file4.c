@@ -5,7 +5,7 @@
  * by 'ptr1' starts with the substring
  * pointed to by 'ptr2'.
  * @ptr1: The string to search.
- * @ptr2: The substring to find
+ * @ptr2: The substring to find.
  *
  * Return: A pointer to the next
  * character of 'ptr1' after the matching
@@ -22,7 +22,6 @@ char *_with(const char *ptr1, const char *ptr2)
 	}
 	return ((char *)ptr1);
 }
-
 /**
  * delete_n - Deletes a node
  * at a specified index
@@ -31,6 +30,7 @@ char *_with(const char *ptr1, const char *ptr2)
  * @in: The index of the node to be deleted
  * Return: 1 if the node is deleted, 0 otherwise
  */
+
 int delete_n(ll_t **h, unsigned int in)
 {
 	ll_t *n, *p_n;
@@ -63,12 +63,12 @@ int delete_n(ll_t **h, unsigned int in)
 	}
 	return (0);
 }
-
 /**
  * read_his - Read the history from a file
  * @ff: A pointer to a structure containing file information
  * Return: The number of history lines read or 0 on failure
  */
+
 int read_his(ff_t *ff)
 {
 	int j, final = 0, linec = 0;
@@ -111,7 +111,6 @@ int read_his(ff_t *ff)
 	ren_his(ff);
 	return (ff->h_count);
 }
-
 /**
  * _putsdd_me - Write a string to
  * the specified file descriptor.
@@ -120,7 +119,6 @@ int read_his(ff_t *ff)
  *
  * Return: The number of characters written.
  */
-
 int _putsdd_me(char *ptr, int dd)
 {
 	int ii = 0;
@@ -144,6 +142,7 @@ int _putsdd_me(char *ptr, int dd)
  * for the history entry
  * Return: 0 on success
  */
+
 int b_h_l(ff_t *ff, char *buffer, int linec)
 {
 	ll_t *n = NULL;

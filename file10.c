@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * iscmdme - Check if a command exists..
+ * iscmdme - Check if a command exists.
+ * @ff: The structure containing function arguments
+ * and environment variables.
  * @p: The path to check for the command.
- * @ff: A pointer to a structure
  *
  * Return: 1 if the command exists, 0 otherwise.
  */
@@ -44,17 +45,16 @@ int repl_stri_me(char **ol, char *n)
  * @a: The number of bytes to set
  * Return: A pointer to 'ptr'
  */
+
 char *_note(char *ptr, char byte, unsigned int a)
 {
-	unsigned int j = 0;
+	unsigned int j;
 
-	while (j < a)
-	{
+	for (j = 0; j < a; j++)
 		ptr[j] = byte;
-		j++;
-	}
 	return (ptr);
 }
+
 /**
  * _putchar - Writes a character to the
  * standard output.
@@ -62,6 +62,7 @@ char *_note(char *ptr, char byte, unsigned int a)
  *
  * Return: On success, 1. On error, -1.
  */
+
 int _putchar(char c)
 {
 	static int j;
@@ -87,6 +88,7 @@ int _putchar(char c)
  * Return: The number of characters
  * read or 0 if the buffer is not empty
  */
+
 ssize_t r_buffer(ff_t *ff, char *b, size_t *j)
 {
 	ssize_t res = 0;
@@ -98,4 +100,3 @@ ssize_t r_buffer(ff_t *ff, char *b, size_t *j)
 		*j = res;
 	return (res);
 }
-

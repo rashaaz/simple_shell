@@ -6,6 +6,7 @@
  * @h: A pointer to the head of the linked list
  * Return: An array of strings or NULL on failure
  */
+
 char **l_t_s(ll_t *h)
 {
 	ll_t *n = h;
@@ -18,41 +19,37 @@ char **l_t_s(ll_t *h)
 	ptr = malloc(sizeof(char *) * (ii + 1));
 	if (!ptr)
 		return (NULL);
-	ii = 0;
-	while (n)
+	for (ii = 0; n; n = n->next, ii++)
 	{
 		uu = malloc(_len(n->uu) + 1);
 		if (!uu)
 		{
-			jj = 0;
-			while (jj < ii)
-			{
+			for (jj = 0; jj < ii; jj++)
 				free(ptr[jj]);
-				jj++;
-			}
 			free(ptr);
 			return (NULL);
 		}
 
 		uu = _copy(uu, n->uu);
 		ptr[ii] = uu;
-		ii++;
-		n = n->next;
 	}
 	ptr[ii] = NULL;
 	return (ptr);
 }
+
 /**
  * _Handler - Signal handler
  * function for SIGINT (Ctrl+C)
  * @sig_num: The signal number (unused)
  */
+
 void _Handler(__attribute__((unused))int sig_num)
 {
 	print_many_characters("\n");
 	print_many_characters("$ ");
 	_putchar(BUFFER_D);
 }
+
 /**
  * _senv_me - Set an
  * environment variable.
@@ -98,6 +95,7 @@ int _senv_me(ff_t *ff, char *vv, char *val)
 	ff->r_env_ch = 1;
 	return (0);
 }
+
 /**
  * _aputchar_me - Write a
  * character to the standard error.
@@ -119,6 +117,7 @@ int _aputchar_me(char c)
 		bufer[ii++] = c;
 	return (1);
 }
+
 /**
  * _my_erratoi - Convert a string
  * to an integer.
@@ -134,7 +133,7 @@ int _my_erratoi(char *g)
 
 	if (*g == '+')
 		g++;
-	while (g[ii] != '\0')
+	for (ii = 0;  g[ii] != '\0'; ii++)
 	{
 		if (g[ii] >= '0' && g[ii] <= '9')
 		{
@@ -145,7 +144,6 @@ int _my_erratoi(char *g)
 		}
 		else
 			return (-1);
-		ii++;
 	}
 	return (r);
 }

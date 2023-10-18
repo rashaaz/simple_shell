@@ -133,7 +133,7 @@ char *_concatn(char *d, char *so, int num)
 }
 
 /**
- * w_his - Write the history to a file.
+ * w_his - Write the history to a file
  * @ff: A pointer to a structure
  * containing file information
  * Return: 1 on success, -1 on failure
