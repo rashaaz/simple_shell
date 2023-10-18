@@ -46,7 +46,7 @@ int ren_his(ff_t *ff)
  * @ff: File flag structure.
  *
  * Return: 1 if the file descriptor
- * is associated with a terminal, 0 otherwise.
+ * is associated with a terminal, 0 otherwise
  */
 int reactive(ff_t *ff)
 {
