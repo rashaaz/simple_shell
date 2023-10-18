@@ -11,7 +11,7 @@
  * integer using _my_erratoi.
  * If the conversion fails, it sets
  * inter->status to 2, prints an error message
- * indicating an illegal number, and returns 1.
+ * indicating an illegal number, and returns 1
  * If the conversion is successful, it stores the
  * converted integer in inter->_number_err and
  * returns -2, indicating the program
