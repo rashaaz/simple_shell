@@ -8,15 +8,16 @@
  */
 int buffer_free_me(void **ss)
 {
-	if (ss && *ss)
+	switch (ss && *ss)
 	{
-		free(*ss);
-		*ss = NULL;
-		return (1);
+		case 1:
+			free(*ss);
+			*ss = NULL;
+			return (1);
+		default:
+			return (0);
 	}
-	return (0);
 }
-
 /**
  * print_digit_me - Print an integer
  * to the specified file descriptor.
@@ -43,7 +44,7 @@ int print_digit_me(int inp, int x)
 	else
 		sp = inp;
 	now = sp;
-	for (ii = 1000000000; ii > 1; ii /= 10)
+	while (ii > 1)
 	{
 		if (sp / ii)
 		{
@@ -51,20 +52,19 @@ int print_digit_me(int inp, int x)
 			coun++;
 		}
 		now %= ii;
+		ii /= 10;
 	}
 	__putchar('0' + now);
 	coun++;
 
 	return (coun);
 }
-
 /**
  * s_alias_me - Sets an alias in ff->a
  * @ff: A pointer to the ff_t structure
  * @s: The string representing the alias
  * Return: 1 if an error occurred, 0 otherwise
  */
-
 int s_alias_me(ff_t *ff, char *s)
 {
 	char *po;
@@ -89,7 +89,6 @@ int s_alias_me(ff_t *ff, char *s)
  * representing the
  * split words, or NULL if failed.
  */
-
 char **split(char *si, char *del)
 {
 	int ii, jj, r, h, nw = 0;
@@ -137,7 +136,6 @@ char **split(char *si, char *del)
  * head of the linked list
  * Return: The number of nodes in the linked list
  */
-
 size_t print_l(const ll_t *hh)
 {
 	size_t j = 0;
@@ -154,3 +152,4 @@ size_t print_l(const ll_t *hh)
 	}
 	return (j);
 }
+

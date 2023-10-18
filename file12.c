@@ -4,7 +4,7 @@
  * _chme - Searches for the first
  * occurrence of character 'c' in 'str'.
  * @str: Input string to search.
- * @c: Character to find.
+ * @c: Character to find
  *
  * Return: Pointer to the first occurrence
  * of 'c' in 'str', or NULL if not found.
@@ -26,7 +26,6 @@ char *_chme(char *str, char c)
  * Return: The length of
  * the linked list
  */
-
 size_t l_l(const ll_t *hh)
 {
 	size_t j = 0;
@@ -49,7 +48,6 @@ size_t l_l(const ll_t *hh)
  * Return: The number of characters
  * read or -1 on failure
  */
-
 int _getline_me(ff_t *ff, char **ptr, size_t *lg)
 {
 	static char buffer[R_SIZE];
@@ -88,6 +86,7 @@ int _getline_me(ff_t *ff, char **ptr, size_t *lg)
 	*ptr = po;
 	return (st);
 }
+
 
 /**
  * _convert - Convert a number to
@@ -140,25 +139,42 @@ int is_ch_me(ff_t *ff, char *bufer, size_t *pp)
 {
 	size_t jj = *pp;
 
-	if (bufer[jj] == '|' && bufer[jj + 1] == '|')
+	switch (bufer[jj])
 	{
-		bufer[jj] = 0;
-		jj++;
-		ff->c_b_t = C_R;
+		case '|':
+			if (bufer[jj + 1] == '|')
+			{
+				bufer[jj] = 0;
+				jj++;
+				ff->c_b_t = C_R;
+			}
+			else
+			{
+				return (0);
+			}
+			break;
+
+		case '&':
+			if (bufer[jj + 1] == '&')
+			{
+				bufer[jj] = 0;
+				jj++;
+				ff->c_b_t = CMD_D;
+			} else
+			{
+				return (0);
+			}
+			break;
+
+		case ';':
+			bufer[jj] = 0;
+			ff->c_b_t = C_CHA;
+			break;
+
+		default:
+			return (0);
 	}
-	else if (bufer[jj] == '&' && bufer[jj + 1] == '&')
-	{
-		bufer[jj] = 0;
-		jj++;
-		ff->c_b_t = CMD_D;
-	}
-	else if (bufer[jj] == ';')
-	{
-		bufer[jj] = 0;
-		ff->c_b_t = C_CHA;
-	}
-	else
-		return (0);
+
 	*pp = jj;
 	return (1);
 }
