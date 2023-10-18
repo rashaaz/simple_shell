@@ -4,7 +4,7 @@
  * st_in_me - Set input
  * variables in the ff_t structure.
  * @ff: Pointer to an ff_t structure.
- * @av: Array of command-line arguments.
+ * @av: Array of command-line arguments
  */
 void st_in_me(ff_t *ff, char **av)
 {
