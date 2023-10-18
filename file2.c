@@ -57,7 +57,7 @@ int reactive(ff_t *ff)
  * _cd_me - Handles the cd
  * (change directory) command.
  * @ff: The structure containing function
- * arguments and environment variables.
+ * arguments and environment variables
  *
  * This function attempts to
  * retrieve the current
